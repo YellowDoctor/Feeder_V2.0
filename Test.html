@@ -1,0 +1,96 @@
+<!-- <html>
+    <head>
+        <title>Test project</title>
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        
+<form>
+        <label for="name" class="text_style">Iм'я:</label>
+    <input id ="name">
+    <label for="second" class="text_style">Прізвище:</label>
+    <input id= "second">
+
+    <input>
+    
+</form>
+
+<object type="application/x-shockwave-flash" data="http://flash-mp3-player.net/medias/player_mp3_multi.swf" width="200" height="100">
+    <param name="movie" value="http://flash-mp3-player.net/medias/player_mp3_multi.swf" />
+    <param name="bgcolor" value="#ffffff" />
+    <param name="FlashVars" value="mp3=http%3A//flash-mp3-player.net/medias/another_world.mp3" />
+</object>
+    
+
+    </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <table id="tbl">
+        <thead>
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr v-for="todo in list">
+                <td>{{todo.text}}</td>
+                <td>{{todo.name}}</td>
+                <td>{{todo.age}}</td>
+                <!-- <td>Smith</td>
+            <td>50</td> -->
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <!-- <script src="script.js"></script> -->
+    <script>
+        var app4 = new Vue({
+            el: '#tbl',
+            data: {
+                list: [{
+                        text: 'Learn JavaScript',
+                        name: 'Test',
+                        age: '20'
+                    },
+                    {
+                        text: 'Learn Vue',
+                        name: 'Test1',
+                        age: '21'
+                    },
+                    {
+                        text: 'Build something awesome',
+                        name: 'Test2',
+                        age: '22'
+                    }
+                ]
+            }
+        })
+    </script>
+
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</body>
+
+</html>
